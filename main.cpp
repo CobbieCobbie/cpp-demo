@@ -1,13 +1,15 @@
 //include a local class header
 #include "Rectangle.hpp"
-
-//use the namespace of the standard libs of C/C++
-using namespace std;
+//iostream enables printing on the console (cout)
+#include <iostream>
 
 int main(const int argc, const char** argv)
 {
     // Print a message, using the namespace of std explicitely
     std::cout << "Initializing..." << std::endl;
+
+    //use the namespace of the standard libs of C/C++
+    using namespace std;    
     
     // Print a message without explicite namespace since we declared it globally in line 7
     cout << "Still initializing..." << endl;

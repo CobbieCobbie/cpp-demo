@@ -1,6 +1,9 @@
 // The header file determines the content of this implementation file
 #include "Rectangle.hpp"
 
+//iostream enables printing on the console (cout)
+#include <iostream>
+
 // Constructor
 Rectangle :: Rectangle(const int width, const int height)
     : width(width), height(height)

@@ -1,4 +1,4 @@
-# small-cpp-project (Algorithmics lecture WS21/22)
+# small-cpp-project
 This repository serves as a small introduction for a second year student lecture in order to successfully compile, run and understand the basics of a simple cpp project.
 
 

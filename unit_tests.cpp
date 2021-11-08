@@ -4,16 +4,21 @@
 #include "Rectangle.hpp"
 #include <iostream>
 
-int return_rect_area(int width, int height)
+TEST_CASE("Succeeding unit tests")
 {
-    Rectangle rect1;
-    rect1.set_values(width, height);
-    return rect1.get_area();
+    Rectangle rect;
+    CHECK(rect.get_area() == 0);
+    rect.set_values(10,10);
+    CHECK(rect.get_area() == 100);    
 }
 
-TEST_CASE("Testing the area of various Rectangles")
-{
-    CHECK(return_rect_area(10,10) == 100);
-    CHECK(return_rect_area(0,0) == 0);
-    CHECK(return_rect_area(-2,2) == 4);
+TEST_CASE("Unit tests with sub cases"){
+    Rectangle rect;
+    SUBCASE("Not setting the area"){
+        CHECK(rect.get_area() == 0);
+    }
+    SUBCASE("Setting the area"){
+        rect.set_values(10,10);
+        CHECK(rect.get_area() == 100);
+    }
 }

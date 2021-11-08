@@ -10,7 +10,7 @@ test: unit_tests.o Rectangle.o Triangle.o GeometricShapes.o
 main.o:
 	g++ -c main.cpp
 
-test.o:
+unit_tests.o:
 	g++ -c unit_tests.cpp
 
 Rectangle.o:

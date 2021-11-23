@@ -18,5 +18,3 @@ GeometricShapes.o:
 
 clean:
 	rm -rf *.o
-
-	

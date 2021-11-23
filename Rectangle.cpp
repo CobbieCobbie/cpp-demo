@@ -5,7 +5,8 @@
 #include <iostream>
 
 // Constructor
-
+Rectangle :: Rectangle(double width, double height) : GeometricShapes(),
+        width(width), height(height){};
 
 // Destructor
 Rectangle :: ~Rectangle()

@@ -26,8 +26,7 @@ class Rectangle : public GeometricShapes {
     
     // The constructor, destructor and the functions are availiable to use from any other code position
     public :
-        Rectangle(double width = 0, double height = 0) : GeometricShapes(),
-        width(width), height(height){};
+        Rectangle(double width = 0, double height = 0);
         ~Rectangle(); 
         void set_values(int w, int h);
         double get_area() override;

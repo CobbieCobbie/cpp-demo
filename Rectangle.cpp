@@ -5,11 +5,7 @@
 #include <iostream>
 
 // Constructor
-Rectangle :: Rectangle(const int width, const int height)
-    : width(width), height(height)
-{
 
-}
 
 // Destructor
 Rectangle :: ~Rectangle()
@@ -25,13 +21,14 @@ void Rectangle :: set_values(int w, int h)
 }
 
 // get_area function, returns the area (int)
-int Rectangle :: get_area()
+double Rectangle :: get_area()
 {
     return (height * width);
 }
 
 // pretty-print the rectangle object specs
-void Rectangle :: print() const
+void Rectangle :: print()
 {
+    std::cout << "This is a Rectangle" << std::endl;
     std::cout << "Width: " << width << ", Height: " << height << std::endl;
 }

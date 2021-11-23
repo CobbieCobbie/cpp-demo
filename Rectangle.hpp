@@ -31,7 +31,7 @@ class Rectangle : public GeometricShapes {
         ~Rectangle(); 
         void set_values(int w, int h);
         double get_area() override;
-        void print();
+        void print() override;
 };
 
 //#endif

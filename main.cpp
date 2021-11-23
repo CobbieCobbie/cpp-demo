@@ -1,5 +1,7 @@
 //include a local class header
 #include "Rectangle.hpp"
+#include "Triangle.hpp"
+
 //iostream enables printing on the console (cout)
 #include <iostream>
 
@@ -25,6 +27,13 @@ int main(const int argc, const char** argv)
     rect.print();
     int area = rect.get_area();
     cout << "Area: " << area << endl;
+
+    Triangle t1;
+    t1.print();
+    Triangle t2 = Triangle(3,4,5);
+    t2.print();
+    cout << "Area: " << t2.get_area() << endl; 
+
     
     // exit code of main() (0 always means everything worked)
     return 0;

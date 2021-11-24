@@ -15,21 +15,23 @@ Now, however, it is common practice to set
 /*
 ensuring that the header file is used only once. The compiler does the rest.
 */
+#include "GeometricShapes.hpp"
 
-class Rectangle{
+class Rectangle : public GeometricShapes {
 
     // The width and height are "classified information"
     private :
-        int width;
-        int height;
+        double width;
+        double height;
     
     // The constructor, destructor and the functions are availiable to use from any other code position
     public :
-        Rectangle(const int width = 0, const int height = 0);
-        ~Rectangle();
+        Rectangle(double width = 0, double height = 0);
+        ~Rectangle(); 
         void set_values(int w, int h);
-        int get_area();
-        void print() const;
+        double get_area() override;
+        void print() override;
+        bool operator == (const Rectangle& rect);
 };
 
 //#endif

@@ -32,4 +32,10 @@ void Rectangle :: print()
 {
     std::cout << "This is a Rectangle" << std::endl;
     std::cout << "Width: " << width << ", Height: " << height << std::endl;
+    std::cout << "Area: " << get_area() << std::endl;
+}
+
+bool Rectangle :: operator == (const Rectangle& rect)
+{
+    return (width == rect.width && height == rect.height) || (width == rect.height && height == rect.width);
 }

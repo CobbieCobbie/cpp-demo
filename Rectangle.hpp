@@ -31,6 +31,7 @@ class Rectangle : public GeometricShapes {
         void set_values(int w, int h);
         double get_area() override;
         void print() override;
+        bool operator == (const Rectangle& rect);
 };
 
 //#endif

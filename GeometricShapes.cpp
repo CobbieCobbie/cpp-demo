@@ -20,3 +20,8 @@ void GeometricShapes::print()
 {
     std::cout << "This is a geometric shape";
 }
+
+bool GeometricShapes :: operator == (const GeometricShapes& g)
+{
+    return true;
+}

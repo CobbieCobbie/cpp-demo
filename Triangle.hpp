@@ -11,4 +11,5 @@ class Triangle : public GeometricShapes {
         void set_values(double side1, double side2, double side3);
         double get_area() override;
         void print() override;
+        bool operator == (const Triangle& t);
 };

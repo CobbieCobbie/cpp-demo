@@ -1,8 +1,8 @@
 // test "doctest" unit-testing framework
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest/doctest.h"
-#include "Rectangle.hpp"
-#include "Triangle.hpp"
+#include "GeometricShapes/Rectangle.hpp"
+#include "GeometricShapes/Triangle.hpp"
 #include <iostream>
 
 TEST_CASE("Rectangle unit tests")

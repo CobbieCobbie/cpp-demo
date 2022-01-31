@@ -14,13 +14,13 @@ unit_tests.o:
 	g++ -c unit_tests.cpp
 
 Rectangle.o:
-	g++ -c Rectangle.cpp
+	g++ -c GeometricShapes/Rectangle.cpp
 
 Triangle.o:
-	g++ -c Triangle.cpp
+	g++ -c GeometricShapes/Triangle.cpp
 
 GeometricShapes.o:
-	g++ -c GeometricShapes.cpp
+	g++ -c GeometricShapes/GeometricShapes.cpp
 
 clean:
 	rm -rf *.o

@@ -1,6 +1,6 @@
 //include a local class header
-#include "Rectangle.hpp"
-#include "Triangle.hpp"
+#include "GeometricShapes/Rectangle.hpp"
+#include "GeometricShapes/Triangle.hpp"
 
 //iostream enables printing on the console (cout)
 #include <iostream>

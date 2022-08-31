@@ -1,6 +1,8 @@
-//include a local class header
+//include local class headers
 #include "GeometricShapes/Rectangle.hpp"
 #include "GeometricShapes/Triangle.hpp"
+#include "Graph/Graph.hpp"
+#include "Graph/Vertex.hpp"
 
 //iostream enables printing on the console (cout)
 #include <iostream>
@@ -11,8 +13,8 @@ int main(const int argc, const char** argv)
     std::cout << "Initializing..." << std::endl;
 
     //use the namespace of the standard libs of C/C++
-    using namespace std;    
-    
+    using namespace std;
+
     // Print a message without explicite namespace since we declared it globally in line 7
     cout << "Still initializing..." << endl;
 
@@ -31,6 +33,26 @@ int main(const int argc, const char** argv)
     Triangle t4 = Triangle(3,5,5);
     cout << "t2 == t3?: " << (t2 == t3) << endl;
     cout << "t3 == t4?: " << (t3 == t4) << endl;
+
+    Vertex* v1 = new Vertex("A");
+    Vertex* v2 = new Vertex("B");
+    Vertex* v3 = new Vertex("C");
+    list<Vertex*> vertices;
+    vertices.push_back(v1);
+    vertices.push_back(v2);
+    vertices.push_back(v3);
+    Graph* g = new Graph(vertices);
+
+    g->addEdge(v1, v2);
+    g->addEdge(v2, v3);
+    g->addEdge(v1, v3);
+
+    g->print();
+    list<Vertex*> edges = g->getEdges(v1);
+    cout << "Neighbours of " << v1->getLabel() << " are:" << endl;
+    for (Vertex* e : edges){
+        cout << e->getLabel() << endl;
+    }
 
     // exit code of main() (0 always means everything worked)
     return 0;

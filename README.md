@@ -4,20 +4,25 @@ This repository serves as a small introduction for a second year student lecture
 
 ## General overview
 
-While C Projects inherit header / implementation files in .h / .c format, C++ Projects hold .hpp / .cpp format. It is still possible to use .h files in C++. 
+While C Projects inherit header / implementation files in .h / .c format, C++ Projects hold .hpp / .cpp format. It is still possible to use .h files in C++.
 
 
 ## Prequisites
-gcc, make
+g++, CMake
 
 
 ## How to compile
-For compilation, gcc and Make is used. The command is put in a Makefile. Just open the workspace in a shell and simply type 
+For compilation, g++ is used. The build setup is defined by CMake. Just open the workspace in a shell and simply type
 
-`make`
+`cmake --build .`
 
-gcc will create an object from every implementation / header pair in the first step, followed by linking the objects to an executable. Thus, it will not work to build the main file "stand-alone". After successful compilation and build, run the executable by calling:
+g++ will create an object from every implementation / header pair in the first step, followed by linking the objects to an executable. Thus, it will not work to build the main file "stand-alone". After successful compilation and build, run the executable by calling:
 
-`./rect`
+`./prog`
 
-This is the name defined in the Makefile and the executable is performed in the shell.
+This is the name defined in CMake and the executable is performed in the shell.
+
+## How to unit test
+For unit tests, the framework doctest is used. It throws a standalone binary with all unit tests defined in unit_tests.cpp. To execute the unit tests, call
+
+`./test`

@@ -2,8 +2,8 @@
 .vscode/*
 
 # exclude binaries
-prog
-test
+CppDemo
+CppUnitTests
 
 # include the gitignore for CMake from github
 CMakeLists.txt.user

@@ -4,6 +4,9 @@
 #include "Graph/Graph.hpp"
 #include "Graph/Vertex.hpp"
 
+// Including target config from CMake
+#include "CppDemo_config.h"
+
 //iostream enables printing on the console (cout)
 #include <iostream>
 
@@ -52,6 +55,15 @@ int main(const int argc, const char** argv)
     cout << "Neighbours of " << v1->getLabel() << " are:" << endl;
     for (Vertex* e : edges){
         cout << e->getLabel() << endl;
+    }
+
+    // Print the version of this project
+    if (argc < 2) {
+        // report version
+        std::cout << argv[0] << " Version " << CppDemo_VERSION_MAJOR << "."
+                  << CppDemo_VERSION_MINOR << std::endl;
+        std::cout << "Usage: " << argv[0] << " number" << std::endl;
+        return 1;
     }
 
     // exit code of main() (0 always means everything worked)

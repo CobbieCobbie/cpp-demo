@@ -1,2 +1,19 @@
 # exclude everything from VSCode
 .vscode/*
+
+# exclude binaries
+CppDemo
+CppUnitTests
+
+# include the gitignore for CMake from github
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps

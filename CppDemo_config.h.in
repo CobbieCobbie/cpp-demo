@@ -1,0 +1,2 @@
+#define CppDemo_VERSION_MAJOR @CppDemo_VERSION_MAJOR@
+#define CppDemo_VERSION_MINOR @CppDemo_VERSION_MINOR@

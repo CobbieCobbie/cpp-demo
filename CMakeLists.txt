@@ -43,3 +43,7 @@ target_include_directories(CppUnitTests PUBLIC
                             "${PROJECT_SOURCE_DIR}/Graph"
                             )
 
+# enable testing
+enable_testing()
+
+add_test(NAME CppUnitTests COMMAND CppUnitTests)
